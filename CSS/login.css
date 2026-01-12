@@ -39,6 +39,7 @@ body {
   animation-timing-function: ease-in-out;
   /* When the animation ends, freeze on the last frame */
   animation-fill-mode: forwards;
+  
 }
 
 /* We call the animation (by the name we gave it) */
@@ -161,6 +162,8 @@ body {
   position: relative;
   border-radius: 10px;
   border-style: none;
+  padding: 10px;
+
 }
 
 .login-nt i{
@@ -175,10 +178,22 @@ body {
     font-size: 18px;
 }
 
+.mail:hover{
+    background-color: rgb(219, 74, 57, 0.8);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .fb{
     background-color: #3b5999;
     color: white;
     font-size: 18px;
+}
+
+.fb:hover{
+    background-color: rgb(59, 89, 153, 0.8);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .twitter{
@@ -187,9 +202,22 @@ body {
     font-size: 18px;
 }
 
+.twitter:hover{
+    background-color: rgb(0, 172, 238, 0.8);
+    cursor: pointer;
+    text-decoration: underline;
+
+}
+
 .ig{
     /* Official Instagram gradient */
     background-image: linear-gradient(to bottom right, #515bd4, #8134af, #dd2a7b, #feda77, #f58529);
     color: white;
     font-size: 18px;
+  }
+  
+  .ig:hover{
+    background-image: linear-gradient(to bottom right, rgb(81,91,212,0.8),rgb(129,52,175,0.8), rgb(221,42,123,0.8), rgb(254,218,119,0.8), rgb(245,133,41,0.8));
+    cursor: pointer;
+    text-decoration: underline;
 }

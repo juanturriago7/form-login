@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    height: 100%;
+    background-color: rgba(138, 138, 138, 0.472);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form{
+    background-color: black;
+    width: 400px;
+    height: 600px;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    /* *Animation */
+    animation-name: border; /* Here we can put any name */
+    animation-duration: 2s; /* Here we put the duration in seconds */
+    /* Makes the animation start slowly, speed up in the middle, and end slowly again. */
+    animation-timing-function: ease-in-out;
+    /* When the animation ends, freeze on the last frame */
+    animation-fill-mode: forwards;
+
+}
+
+/* We call the animation (by the name we gave it) */
+@keyframes border {
+  /* This is when we restart, because it's at 0%. */
+  0% {
+    border-radius: 0%;
+  }
+
+  /* Here, when the page loaded completely */
+  100% {
+    border-radius: 15%;
+  }
+}
+
+form h1{
+    margin: 10px, 0;
+    text-align: center;
+    
+}
+
+.form h2{
+    margin: 5px 0;
+    font-weight: unset;
+    /*
+    Since the container is display:flex, it applies the property to the children. 
+    We want the h2 to maintain all the space and push the objects down,
+     so we set it to block.
+    */
+    display: block;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: white 2px solid;
+    font-size: 16px;
+}
+
+.form a{
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.form a:hover{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.register{
+    width: 100%;
+    margin: 10px 0;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: rgb(33, 182, 219);
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.register:hover{
+    color: white;
+    background-color: rgb(33, 182, 219, 0.5);
+    text-decoration: underline;
+    cursor: pointer;
+}
