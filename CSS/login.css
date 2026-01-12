@@ -1,129 +1,195 @@
-*{
-    padding: 0;
-    margin: 0; 
-    font-family: 'Roboto', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    height: 100%;
-    background-color: rgba(138,138,138, 0.472);
+body {
+  height: 100%;
+  background-color: rgba(138, 138, 138, 0.472);
 }
 
-.container{
-    height: 100vh;
-    width: 100%;
-    display: flex; /*  When we use display flex, two new items are enabled */
-    align-items: center;
-    justify-content: center;
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex; /*  When we use display flex, two new items are enabled */
+  align-items: center;
+  justify-content: center;
 }
 
-.container-lg{
-    display: flex;
-    width: 700px;
-    height: auto;
+.container-lg {
+  display: flex;
+  width: 700px;
+  height: auto;
 }
 
-.login{
-    background-color: white;
-    width: 400px;
-    height: 500px;
-    color: black;
-    box-sizing: border-box; 
-    /* I want the width I give you to be the actual final size of the element, regardless of how much padding or border I add. */
-    padding: 30px 40px;
-    border-radius: 10px;
-    /* *Animation */
-    animation-name: border; /* Here we can put any name */
-    animation-duration: 2s; /* Here we put the duration in seconds */
-    /* Makes the animation start slowly, speed up in the middle, and end slowly again. */
-    animation-timing-function: ease-in-out;
-    /* When the animation ends, freeze on the last frame */
-    animation-fill-mode: forwards;
-
-
+.login {
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  color: black;
+  box-sizing: border-box;
+  /* I want the width I give you to be the actual final size of the element, regardless of how much padding or border I add. */
+  padding: 30px 40px;
+  border-radius: 10px;
+  /* *Animation */
+  animation-name: border; /* Here we can put any name */
+  animation-duration: 2s; /* Here we put the duration in seconds */
+  /* Makes the animation start slowly, speed up in the middle, and end slowly again. */
+  animation-timing-function: ease-in-out;
+  /* When the animation ends, freeze on the last frame */
+  animation-fill-mode: forwards;
 }
 
 /* We call the animation (by the name we gave it) */
-@keyframes border{
+@keyframes border {
+  /* This is when we restart, because it's at 0%. */
+  0% {
+    border-radius: 0%;
+  }
 
-    /* This is when we restart, because it's at 0%. */
-    0%{
-        border-radius: 0%;
-    }
-
-    /* Here, when the page loaded completely */
-    100%{
-        border-top-left-radius: 20%;
-        border-bottom-left-radius: 20%;
-    }
-
-
-
+  /* Here, when the page loaded completely */
+  100% {
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+  }
 }
 
-.login-nt{
-    background-color: aqua;
+.login .title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 30px 0;
+  margin-top: 15px;
 }
 
-.login .title{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    text-align: center;
-    padding: 0 0 30px 0;
-    margin-top: 15px; 
+.login h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: unset; /* Used to remove bold */
+  display: block;
 }
 
-.login h2{
-    margin: 0;
-    padding: 0;
-    font-weight: unset; /* Used to remove bold */
-    display: block;
+.login input {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  border: none; /* To remove the borders */
+  color: black;
+  border-color: transparent;
+  border-bottom: black 2px solid;
+  font-size: 16px;
 }
 
-.login input{
-    width: 100%;
-    height: 50px;
-    margin: 10px 0;
-    border: none;     /* To remove the borders */
-    color: black;
-    border-color: transparent;
-    border-bottom: black 2px solid;
-    font-size: 16px;
+.access {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: rgb(33, 182, 219);
+  font-size: 16px;
+  border-radius: 25px;
 }
 
-.access{
-    width: 100%;
-    height: 40px;
-    margin: 10px 0;
-    border: none;
-    outline: none;
-    color: black;
-    background-color: rgb(33, 182, 219);
-    font-size: 16px;
-    border-radius: 25px;
+.access:hover {
+  background-color: rgb(33, 182, 219, 0.5);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.access:hover{
-    background-color: rgb(33, 182, 219, 0.5);
-    text-decoration: underline;
-    cursor: pointer;
+.login button a {
+  text-decoration: none;
+  color: white;
 }
 
-.login button a{
-    text-decoration: none;
+.login a {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: darkgray;
+  margin: 5px 0 0 0;
+}
+
+.login a:hover {
+  color: black;
+}
+
+.login-nt {
+  width: 400px;
+  height: 500px;
+  color: white;
+  background-color: black;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  border-radius: 10px;
+  animation-name: border2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes border2 {
+  0% {
+    border-radius: 0%;
+  }
+  100% {
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+  }
+}
+
+.login-nt .title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 30px 0;
+  margin-top: 15px;
+}
+
+.icons button {
+  width: 100%;
+  margin: 20px 0;
+  /*
+    It is set relative so that it acts as the anchor,
+     and when the style of the buttons is changed, 
+     they do not move outside the button.
+    */
+  position: relative;
+  border-radius: 10px;
+  border-style: none;
+}
+
+.login-nt i{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.mail{
+    background-color: #db4a39;
     color: white;
+    font-size: 18px;
 }
 
-.login a{
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
-    color: darkgray;
-    margin: 5px 0 0 0;
+.fb{
+    background-color: #3b5999;
+    color: white;
+    font-size: 18px;
 }
 
-.login a:hover{
-    color: black;
+.twitter{
+    background-color: #00acee;
+    color: white;
+    font-size: 18px;
 }
 
+.ig{
+    /* Official Instagram gradient */
+    background-image: linear-gradient(to bottom right, #515bd4, #8134af, #dd2a7b, #feda77, #f58529);
+    color: white;
+    font-size: 18px;
+}
